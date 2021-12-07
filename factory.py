@@ -1,5 +1,6 @@
 from command import BaseCommand
 from bridge.command import BridgeCommand
+from flyweight.command import FlyweightCommand
 from strategy.command import StrategyCommand
 from visitor.command import VisitorCommand
 
@@ -7,6 +8,7 @@ from visitor.command import VisitorCommand
 class CommandFactory:
     _patterns = {
         "bridge": BridgeCommand,
+        "flyweight": FlyweightCommand,
         "strategy": StrategyCommand,
         "visitor": VisitorCommand,
     }
