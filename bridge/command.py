@@ -4,6 +4,10 @@ from bridge.implementation import FormatIntImpl, FormatDateImpl
 
 
 class BridgeCommand(BaseCommand):
+    def __init__(self):
+        super(BaseCommand, self).__init__()
+        self.name = "bridge"
+
     def run(self):
         formatter = Formatter(implementation=FormatIntImpl())
         print(formatter.format('12345'))

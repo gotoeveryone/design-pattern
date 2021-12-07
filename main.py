@@ -9,4 +9,5 @@ if __name__ == "__main__":
 
     [_, pattern] = sys.argv
     command = CommandFactory.get_command(pattern)
+    print(f"Running command: {command.name}")
     command.run()

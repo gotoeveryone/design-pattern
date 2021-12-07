@@ -5,6 +5,10 @@ from strategy.entity import Person
 
 
 class StrategyCommand(BaseCommand):
+    def __init__(self):
+        super(BaseCommand, self).__init__()
+        self.name = "strategy"
+
     def run(self):
         a1 = Person(height=124, weight=53, age=25)
         a2 = Person(height=125, weight=60, age=30)

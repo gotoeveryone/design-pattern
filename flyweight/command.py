@@ -3,6 +3,10 @@ from flyweight.factory import RoleFactory
 
 
 class FlyweightCommand(BaseCommand):
+    def __init__(self):
+        super(BaseCommand, self).__init__()
+        self.name = "flyweight"
+
     def run(self):
         admin1 = RoleFactory.get_role("管理者")
         print(f"admin1 の uuid: {admin1.id}")
