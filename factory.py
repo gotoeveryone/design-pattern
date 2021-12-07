@@ -1,11 +1,13 @@
 from command import BaseCommand
 from bridge.command import BridgeCommand
+from strategy.command import StrategyCommand
 from visitor.command import VisitorCommand
 
 
 class CommandFactory:
     _patterns = {
         "bridge": BridgeCommand,
+        "strategy": StrategyCommand,
         "visitor": VisitorCommand,
     }
 
